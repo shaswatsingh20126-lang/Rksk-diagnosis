@@ -1,0 +1,530 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>RKSK Diagnosis — Intelligence Designed To Care</title>
+    <meta name="description" content="AI-Powered Visual Wellness Screening under Project RKSK. Designed by Shaswat Singh. Intelligent non-diagnostic facial wellness indicators." />
+    <meta property="og:title" content="RKSK Diagnosis — Intelligence Designed To Care" />
+    <meta property="og:description" content="AI-Powered Visual Wellness Screening designed by Shaswat Singh." />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Retro Display Dot-Matrix Webfont: BubbledotICG-FinePos -->
+    <link
+      href="https://db.onlinewebfonts.com/c/8cb707a9b8a73f8a7403336b861c3074?family=BubbledotICG-FinePos"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+    />
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Fullscreen Background Video & Overlay -->
+    <div class="video-container" aria-hidden="true">
+      <video class="bg-video" autoplay muted loop playsinline>
+        <source
+          src="https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260809_012548_ef22562c-c0ae-4816-ad9d-f8922af4e6a7.mp4"
+          type="video/mp4"
+        />
+      </video>
+      <div class="video-overlay"></div>
+      <div class="grid-scanlines"></div>
+    </div>
+
+    <!-- Main Viewport Shell -->
+    <main class="app-shell">
+      <!-- Top Bar Header -->
+      <header class="site-header" role="banner">
+        <div class="header-left">
+          <button class="logo-btn" aria-label="RKSK Diagnosis Home" title="RKSK Diagnosis">
+            <img src="assets/logo.webp" alt="RKSK Logo" class="logo-img" onerror="this.onerror=null; this.src='assets/logo.jpg';" />
+          </button>
+        </div>
+
+        <!-- Desktop Navigation Pill -->
+        <nav class="nav-pill" role="navigation" aria-label="Primary Navigation">
+          <button class="nav-link active" data-target="home">
+            Home
+            <span class="dots-indicator" aria-hidden="true">
+              <span class="dot"></span>
+              <span class="dot"></span>
+              <span class="dot"></span>
+            </span>
+          </button>
+          <button class="nav-link" data-target="diagnosis">
+            Diagnosis
+            <span class="dots-indicator" aria-hidden="true">
+              <span class="dot"></span>
+              <span class="dot"></span>
+              <span class="dot"></span>
+            </span>
+          </button>
+          <button class="nav-link" data-target="how-it-works">
+            How It Works
+            <span class="dots-indicator" aria-hidden="true">
+              <span class="dot"></span>
+              <span class="dot"></span>
+              <span class="dot"></span>
+            </span>
+          </button>
+          <button class="nav-link" data-target="about">
+            About
+            <span class="dots-indicator" aria-hidden="true">
+              <span class="dot"></span>
+              <span class="dot"></span>
+              <span class="dot"></span>
+            </span>
+          </button>
+        </nav>
+
+        <!-- Right Header Action Pill -->
+        <div class="header-right">
+          <button class="start-scan-pill js-start-scan" aria-label="Start Face Scan">
+            <span>Start Scan</span>
+          </button>
+          <!-- Mobile Hamburger Button -->
+          <button class="hamburger-btn" id="hamburgerBtn" aria-expanded="false" aria-label="Open navigation menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </header>
+
+      <!-- Center Hero Area -->
+      <section class="hero-section" aria-labelledby="main-heading">
+        <!-- Trust / AI Status Row -->
+        <div class="trust-row" role="status">
+          <span class="trust-badge-label">
+            <span class="pulse-dot" aria-hidden="true"></span>
+            AI VISUAL SCREENING
+          </span>
+          <div class="overlap-icons" aria-label="AI, Vision, and Health modules active">
+            <span class="micro-circle" title="AI Core Engine"><i class="fa-solid fa-microchip"></i></span>
+            <span class="micro-circle" title="Computer Vision Sensor"><i class="fa-solid fa-eye"></i></span>
+            <span class="micro-circle" title="Wellness Indicator Index"><i class="fa-solid fa-heart-pulse"></i></span>
+          </div>
+        </div>
+
+        <!-- Solid White Dot-Matrix Display Headline -->
+        <h1 class="hero-headline" id="main-heading">
+          <span>RKSK</span>
+          <span>Diagnosis</span>
+        </h1>
+
+        <!-- Subheading -->
+        <p class="hero-subheading">
+          <strong>See. Analyze. Understand.</strong>
+          AI-powered visual wellness screening designed to help you understand visible health indicators.
+        </p>
+
+        <!-- Main CTA Pill Button -->
+        <div class="hero-cta">
+          <button class="start-face-scan-btn js-start-scan" aria-label="Launch RKSK Visual Face Scan Interface">
+            <span>Start Face Scan</span>
+            <span class="arrow-symbol" aria-hidden="true">→</span>
+          </button>
+        </div>
+      </section>
+
+      <!-- Stats Footer -->
+      <footer class="stats-footer" role="contentinfo">
+        <div class="stats-grid">
+          <div class="stat-item">
+            <div class="stat-icon" aria-hidden="true">◉</div>
+            <div class="stat-details">
+              <span class="stat-value">AI</span>
+              <span class="stat-label">Vision Engine</span>
+            </div>
+          </div>
+
+          <div class="stat-item">
+            <div class="stat-icon" aria-hidden="true">&lt;</div>
+            <div class="stat-details">
+              <span class="stat-value">120ms</span>
+              <span class="stat-label">Response Target</span>
+            </div>
+          </div>
+
+          <div class="stat-item">
+            <div class="stat-icon" aria-hidden="true">*</div>
+            <div class="stat-details">
+              <span class="stat-value">24/7</span>
+              <span class="stat-label">Monitoring Ready</span>
+            </div>
+          </div>
+
+          <div class="stat-item">
+            <div class="stat-icon" aria-hidden="true">#</div>
+            <div class="stat-details">
+              <span class="stat-value">2.4M</span>
+              <span class="stat-label">Context Capacity</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="brand-footnote">
+          <span>RKSK — Designed by <strong class="creator-highlight">Shaswat Singh</strong></span>
+          <span aria-hidden="true">·</span>
+          <span>Contact: <a href="tel:7887222907" class="creator-highlight">7887222907</a></span>
+          <span aria-hidden="true">·</span>
+          <span>Intelligence Designed To Care</span>
+        </div>
+      </footer>
+    </main>
+
+    <!-- Mobile Navigation Overlay & Sheet -->
+    <div class="mobile-menu-overlay" id="mobileMenuOverlay" role="dialog" aria-modal="true" aria-label="Mobile Navigation">
+      <div class="mobile-menu-sheet">
+        <button class="mobile-nav-link active" data-target="home">Home</button>
+        <button class="mobile-nav-link" data-target="diagnosis">Diagnosis</button>
+        <button class="mobile-nav-link" data-target="how-it-works">How It Works</button>
+        <button class="mobile-nav-link" data-target="about">About</button>
+        <button class="mobile-start-scan-btn js-start-scan">
+          <span>Start Scan</span>
+          <i class="fa-solid fa-arrow-right"></i>
+        </button>
+        <button class="mobile-menu-close-btn" id="mobileMenuCloseBtn">Dismiss</button>
+      </div>
+    </div>
+
+    <!-- Modal 1: Face Scan Interface -->
+    <div class="modal-backdrop" id="scanModal" role="dialog" aria-modal="true" aria-labelledby="scanModalTitle">
+      <div class="modal-container">
+        <div class="modal-header">
+          <div class="modal-title-group">
+            <span class="modal-brand-tag" id="scanModalTitle">RKSK DIAGNOSIS</span>
+            <span class="modal-subtitle">VISUAL WELLNESS SCREENING</span>
+          </div>
+          <button class="modal-close-btn js-modal-close" aria-label="Close modal">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+        </div>
+
+        <div class="modal-body scan-modal-body">
+          <!-- Setup & Capture View -->
+          <div id="scannerSetupView" style="display: flex; flex-direction: column; gap: 1rem;">
+            <!-- Mode Switcher Tabs -->
+            <div class="scan-mode-tabs" role="tablist">
+              <button class="scan-tab-btn active" id="tabUpload" role="tab" aria-selected="true">
+                <i class="fa-solid fa-arrow-up-from-bracket"></i>
+                Upload Face Image
+              </button>
+              <button class="scan-tab-btn" id="tabCamera" role="tab" aria-selected="false">
+                <i class="fa-solid fa-camera"></i>
+                Use Camera
+              </button>
+            </div>
+
+            <!-- Futuristic HUD Viewport Frame -->
+            <div class="camera-hud-frame" id="scanFrame">
+              <!-- Corner reticle brackets -->
+              <span class="hud-corner hud-tl" aria-hidden="true"></span>
+              <span class="hud-corner hud-tr" aria-hidden="true"></span>
+              <span class="hud-corner hud-bl" aria-hidden="true"></span>
+              <span class="hud-corner hud-br" aria-hidden="true"></span>
+              <div class="hud-crosshair" aria-hidden="true"></div>
+
+              <!-- Animated Laser Scanner Line -->
+              <div class="laser-scan-line" aria-hidden="true"></div>
+
+              <!-- Feature Tracking Nodes -->
+              <span class="feature-node node-forehead" aria-hidden="true"></span>
+              <span class="feature-node node-eye-left" aria-hidden="true"></span>
+              <span class="feature-node node-eye-right" aria-hidden="true"></span>
+              <span class="feature-node node-malar-left" aria-hidden="true"></span>
+              <span class="feature-node node-malar-right" aria-hidden="true"></span>
+              <span class="feature-node node-oral" aria-hidden="true"></span>
+
+              <!-- Live Video Feed (Camera Mode) -->
+              <div id="cameraView" style="display: none; width: 100%; height: 100%;">
+                <video id="cameraVideo" class="live-camera-video" playsinline muted autoplay></video>
+              </div>
+
+              <!-- Upload / Preview Feed (Upload Mode) -->
+              <div id="uploadView" style="width: 100%; height: 100%;">
+                <div class="upload-dropzone" id="uploadDropzone">
+                  <div class="dropzone-icon">
+                    <i class="fa-solid fa-cloud-arrow-up"></i>
+                  </div>
+                  <div class="dropzone-text">Select or drag & drop a face photo</div>
+                  <div class="dropzone-hint">Supports JPEG, PNG, or WebP. Centered face recommended.</div>
+                  <input type="file" id="fileInput" accept="image/*" style="display: none;" />
+                </div>
+                <img id="previewImage" class="preview-image" alt="Uploaded face preview" style="display: none;" />
+              </div>
+
+              <!-- In-Frame Analysis Overlay -->
+              <div class="analysis-progress-overlay" id="analysisProgressOverlay" aria-live="polite">
+                <div class="analysis-radar-ring" aria-hidden="true"></div>
+                <div class="analysis-status-text" id="analysisStatusText">Initializing RKSK Vision...</div>
+                <div class="analysis-bar-track">
+                  <div class="analysis-bar-fill" id="analysisBarFill"></div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Instant Demo Sample Portraits for Quick Try-out -->
+            <div class="samples-row">
+              <span class="samples-label">Instant Demo Samples:</span>
+              <div class="samples-btns">
+                <button type="button" class="sample-chip" data-sample="sample1">Neutral Face</button>
+                <button type="button" class="sample-chip" data-sample="sample2">High-Key Ambient</button>
+                <button type="button" class="sample-chip" data-sample="sample3">Rested Baseline</button>
+              </div>
+            </div>
+
+            <!-- Action Controls -->
+            <div class="scan-actions-bar">
+              <button class="action-btn action-btn-secondary" id="capturePhotoBtn" style="display: none;">
+                <i class="fa-solid fa-camera"></i>
+                <span>Capture Frame</span>
+              </button>
+              <button class="action-btn action-btn-secondary" id="retakeBtn" style="display: none;">
+                <i class="fa-solid fa-arrow-rotate-left"></i>
+                <span>Clear</span>
+              </button>
+              <button class="action-btn action-btn-primary" id="analyzeBtn" disabled>
+                <i class="fa-solid fa-magnifying-glass-chart"></i>
+                <span>Analyze Image</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Results View -->
+          <div class="results-view" id="resultsView">
+            <div class="results-overview-card">
+              <div class="overview-left">
+                <span class="overview-tag">RKSK VISUAL SCREENING</span>
+                <span class="overview-title">Screening Estimation Complete</span>
+              </div>
+              <span class="overview-status-pill">
+                <i class="fa-solid fa-circle-check" style="color: #4ade80;"></i>
+                Synthesized
+              </span>
+            </div>
+
+            <div class="indicators-list">
+              <!-- Indicator 1 -->
+              <div class="indicator-card">
+                <div class="indicator-header">
+                  <span class="indicator-name">Facial Appearance</span>
+                  <span class="indicator-confidence">Confidence 89%</span>
+                </div>
+                <p class="indicator-observation">Visual Observation: Normal-looking visible features, symmetric bilateral alignment.</p>
+                <span class="indicator-signal">
+                  <i class="fa-regular fa-circle-dot"></i>
+                  Wellness Signal: No obvious visual concern detected
+                </span>
+              </div>
+
+              <!-- Indicator 2 -->
+              <div class="indicator-card">
+                <div class="indicator-header">
+                  <span class="indicator-name">Skin Appearance</span>
+                  <span class="indicator-confidence">Confidence 87%</span>
+                </div>
+                <p class="indicator-observation">Visual Observation: Balanced chromatic distribution, positive epidermal reflection baseline.</p>
+                <span class="indicator-signal">
+                  <i class="fa-regular fa-circle-dot"></i>
+                  Wellness Signal: Normal visible skin tone vitality
+                </span>
+              </div>
+
+              <!-- Indicator 3 -->
+              <div class="indicator-card">
+                <div class="indicator-header">
+                  <span class="indicator-name">Eye Area</span>
+                  <span class="indicator-confidence">Confidence 91%</span>
+                </div>
+                <p class="indicator-observation">Visual Observation: Clear sclera appearance, standard palpebral opening ratio.</p>
+                <span class="indicator-signal">
+                  <i class="fa-regular fa-circle-dot"></i>
+                  Wellness Signal: Minimal signs of ocular strain
+                </span>
+              </div>
+
+              <!-- Indicator 4 -->
+              <div class="indicator-card">
+                <div class="indicator-header">
+                  <span class="indicator-name">Visible Fatigue Indicators</span>
+                  <span class="indicator-confidence">Confidence 84%</span>
+                </div>
+                <p class="indicator-observation">Visual Observation: Mild periorbital shadowing, alert resting gaze orientation.</p>
+                <span class="indicator-signal">
+                  <i class="fa-regular fa-circle-dot"></i>
+                  Wellness Signal: Adequate visible rest baseline
+                </span>
+              </div>
+
+              <!-- Indicator 5 -->
+              <div class="indicator-card">
+                <div class="indicator-header">
+                  <span class="indicator-name">General Wellness Signals</span>
+                  <span class="indicator-confidence">Confidence 88%</span>
+                </div>
+                <p class="indicator-observation">Visual Observation: Relaxed facial symmetry, natural micro-expression harmony.</p>
+                <span class="indicator-signal">
+                  <i class="fa-regular fa-circle-dot"></i>
+                  Wellness Signal: Optimal visible wellness profile
+                </span>
+              </div>
+            </div>
+
+            <!-- Mandatory Medical Safety Disclaimer -->
+            <div class="safety-disclaimer-box" role="note">
+              <strong>Medical Disclaimer</strong>
+              This AI screening is not a medical diagnosis. Facial appearance alone cannot reliably determine a person's health or diagnose disease. For medical concerns, consult a qualified healthcare professional.
+            </div>
+
+            <!-- Result Actions -->
+            <div class="results-actions-bar">
+              <button class="action-btn action-btn-secondary" id="copyReportBtn" style="flex: 1;">
+                <i class="fa-regular fa-copy"></i>
+                <span>Copy Summary</span>
+              </button>
+              <button class="action-btn action-btn-primary" id="scanAgainBtn" style="flex: 1;">
+                <i class="fa-solid fa-arrows-rotate"></i>
+                <span>Scan Again</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal 2: Diagnosis Info Modal -->
+    <div class="modal-backdrop" id="diagnosisModal" role="dialog" aria-modal="true" aria-labelledby="diagModalTitle">
+      <div class="modal-container">
+        <div class="modal-header">
+          <div class="modal-title-group">
+            <span class="modal-brand-tag" id="diagModalTitle">RKSK DIAGNOSIS</span>
+            <span class="modal-subtitle">NON-DIAGNOSTIC SCREENING PHILOSOPHY</span>
+          </div>
+          <button class="modal-close-btn js-modal-close" aria-label="Close modal">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+        </div>
+
+        <div class="modal-body info-content">
+          <div class="info-card">
+            <h4><i class="fa-solid fa-shield-halved"></i> Ethical Visual Estimation</h4>
+            <p>RKSK Diagnosis is developed under a strict ethical framework. The system provides visual wellness observations based on surface optics, illumination consistency, and facial landmark stability—never claiming diagnostic certainty.</p>
+          </div>
+          <div class="info-card">
+            <h4><i class="fa-solid fa-microchip"></i> Multi-Spectral Neural Modeling</h4>
+            <p>Our computer-vision engine isolates 68 facial fiducial coordinates to gauge subtle micro-vascular chromatic shifts and symmetry profiles, computing non-invasive baseline indices.</p>
+          </div>
+          <div class="safety-disclaimer-box">
+            <strong>Clinical Responsibility Notice</strong>
+            Facial screening cannot replace diagnostic blood tests, biopsies, or licensed clinical assessments. Always seek professional physician guidance for any health symptoms.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal 3: How It Works Info Modal -->
+    <div class="modal-backdrop" id="howItWorksModal" role="dialog" aria-modal="true" aria-labelledby="howModalTitle">
+      <div class="modal-container">
+        <div class="modal-header">
+          <div class="modal-title-group">
+            <span class="modal-brand-tag" id="howModalTitle">RKSK SYSTEM PIPELINE</span>
+            <span class="modal-subtitle">HOW THE SCANNER OPERATES</span>
+          </div>
+          <button class="modal-close-btn js-modal-close" aria-label="Close modal">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+        </div>
+
+        <div class="modal-body info-content">
+          <div class="info-card">
+            <h4>1. Optic Frame Acquisition</h4>
+            <p>High-fidelity frame capture occurs directly inside your client browser. No biometric face imagery is uploaded or saved to remote databases, maintaining total confidentiality.</p>
+          </div>
+          <div class="info-card">
+            <h4>2. Facial Mesh Localization</h4>
+            <p>Real-time geometry checks segment key facial domains: the frontal region, ocular aperture, periorbital zone, and mandibular contour.</p>
+          </div>
+          <div class="info-card">
+            <h4>3. Chromatic & Symmetry Extraction</h4>
+            <p>Light variance and surface texture parameters are normalized against ambient tone references to detect visible fatigue and hydration indicators.</p>
+          </div>
+          <div class="info-card">
+            <h4>4. Indicator Synthesis</h4>
+            <p>Visual observations are classified into five wellness signals accompanied by calibrated confidence ratings.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal 4: About Modal -->
+    <div class="modal-backdrop" id="aboutModal" role="dialog" aria-modal="true" aria-labelledby="aboutModalTitle">
+      <div class="modal-container">
+        <div class="modal-header">
+          <div class="modal-title-group">
+            <span class="modal-brand-tag" id="aboutModalTitle">ABOUT RKSK</span>
+            <span class="modal-subtitle">PROJECT RAKSHAK & LEADERSHIP</span>
+          </div>
+          <button class="modal-close-btn js-modal-close" aria-label="Close modal">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+        </div>
+
+        <div class="modal-body info-content">
+          <div class="info-card">
+            <h4><i class="fa-solid fa-compass"></i> Mission: Intelligence Designed To Care</h4>
+            <p>Project RKSK (Rakshak) investigates the frontier where artificial intelligence, computer vision, and preventive wellness converge to empower individuals with accessible, dignified, and responsible health insights.</p>
+          </div>
+
+          <div class="creator-contact-card">
+            <div class="creator-meta-row">
+              <span class="meta-label">Project</span>
+              <span class="meta-val">RKSK Diagnosis</span>
+            </div>
+            <div class="creator-meta-row">
+              <span class="meta-label">Designed By</span>
+              <span class="meta-val">Shaswat Singh</span>
+            </div>
+            <div class="creator-meta-row">
+              <span class="meta-label">Direct Contact</span>
+              <span class="meta-val"><a href="tel:7887222907" style="color: #ffffff; text-decoration: underline;">7887222907</a></span>
+            </div>
+            <div class="creator-meta-row">
+              <span class="meta-label">Architecture</span>
+              <span class="meta-val">Vanilla Pure HTML5 / CSS3 / ES6</span>
+            </div>
+            <div class="creator-meta-row">
+              <span class="meta-label">Privacy Policy</span>
+              <span class="meta-val">100% Client-Side In-Memory Processing</span>
+            </div>
+          </div>
+
+          <div class="safety-disclaimer-box">
+            <strong>Prototype Status</strong>
+            This deployment is an interactive prototype demonstrating responsible visual screening interfaces. It does not provide medical diagnoses or replace clinical consultations.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Script -->
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>

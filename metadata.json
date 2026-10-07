@@ -1,0 +1,6 @@
+{
+  "name": "RKSK Diagnosis",
+  "description": "AI-Powered Visual Wellness Screening designed by Shaswat Singh",
+  "requestFramePermissions": ["camera"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
